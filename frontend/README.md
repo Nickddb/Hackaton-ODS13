@@ -2,6 +2,8 @@
 
 Interface React do sistema de monitoramento climático desenvolvido para a ODS 13 — Ação Contra a Mudança Global do Clima.
 
+Para conhecer as tecnologias, a arquitetura, as rotas e as limitações atuais dos dados, consulte o [guia de tecnologias do front-end](../docs/tecnologias-frontend.md).
+
 ## Executar
 
 ```bash
@@ -9,7 +11,7 @@ npm install
 npm run dev
 ```
 
-A aplicação estará disponível no endereço exibido pelo Vite. Para acessar o painel, use qualquer e-mail válido e uma senha com pelo menos seis caracteres, ou selecione o modo visitante.
+A aplicação estará disponível no endereço exibido pelo Vite. Para acessar o painel, selecione o modo visitante. A sessão é simulada no front-end e não exige credenciais.
 
 ## Validações
 
