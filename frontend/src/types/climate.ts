@@ -21,6 +21,7 @@ export interface ClimateMetric {
 
 export interface ClimateAlert {
   id: string
+  stationId: string
   title: string
   description: string
   category: string
