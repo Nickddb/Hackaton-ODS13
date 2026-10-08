@@ -18,6 +18,8 @@ jobs:
     steps:
       - name: Checkout repositório
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
 
       - name: Configurar Node.js
         uses: actions/setup-node@v4
