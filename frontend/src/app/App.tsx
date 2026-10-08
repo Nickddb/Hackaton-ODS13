@@ -2,9 +2,9 @@ import { Navigate, Route, Routes } from 'react-router-dom'
 import { useAuthStore } from '@/store/auth-store'
 import { PublicHome, LoginPage } from '@/pages/public/PublicPages'
 import { AppLayout } from '@/layouts/AppLayout'
-import { MonitoringPage, TemperaturePage, HistoryPage, SettingsPage, MapPage } from '@/pages/app/Pages'
+import { MonitoringPage, TemperaturePage, HistoryPage, SettingsPage, MapPage } from '@/pages/app/GlobalPages'
 import { DashboardPage } from '@/pages/app/DashboardPage'
-import { AlertsPage, AlertDetailsPage, AlertOccurrencePage } from '@/pages/app/AlertPages'
+import { AlertsPage, AlertDetailsPage, AlertOccurrencePage } from '@/pages/app/StationAlertPages'
 
 function Protected() { return useAuthStore(s => s.authenticated) ? <AppLayout /> : <Navigate to="/login" replace /> }
 export function App() { return <Routes>
