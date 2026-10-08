@@ -1,0 +1,2 @@
+import { stationDashboardData,stations } from '@/mocks/data/climate'; import { useStationStore } from '@/store/station-store'
+export function useActiveStation(){const stationId=useStationStore(s=>s.stationId),setStation=useStationStore(s=>s.setStation),activeId=stationDashboardData[stationId]?stationId:stations[0].id;return {stationId:activeId,station:stations.find(s=>s.id===activeId)!,data:stationDashboardData[activeId],setStation}}

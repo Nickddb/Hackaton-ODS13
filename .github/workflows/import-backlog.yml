@@ -12,9 +12,14 @@ on:
 jobs:
   import-backlog:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
     steps:
       - name: Checkout repositório
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
 
       - name: Configurar Node.js
         uses: actions/setup-node@v4
