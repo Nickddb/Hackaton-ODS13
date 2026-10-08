@@ -22,7 +22,7 @@ Vivemos um momento de emergência ambiental sem precedentes. O projeto tem como 
 ### [Deploy na Vercel](https://hackaton-ods-13-o3ejqfnce-nickddb.vercel.app/)
 ***
 
-<br> <br>
+<br>
 
 ## Documentação do front-end
 
