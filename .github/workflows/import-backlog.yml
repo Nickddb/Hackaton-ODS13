@@ -1,0 +1,33 @@
+name: Importar Backlog para GitHub Issues / Projects
+
+on:
+  workflow_dispatch:
+    inputs:
+      create_projects:
+        description: 'Criar issues no repositório'
+        required: true
+        type: boolean
+        default: true
+
+jobs:
+  import-backlog:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
+    steps:
+      - name: Checkout repositório
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Executar importação das 50 tarefas
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          node scripts/import-backlog-github.js
